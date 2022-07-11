@@ -1,0 +1,33 @@
+<main class="board">
+<div class="eachBoard" *ngFor='let board of allBoards;let i = index' 
+(drop)='drop($event)'
+>
+  <div class="board-title"> {{board.title}}</div>
+  <div class="inputTask" *ngIf='board.showNewcard'> 
+    <textarea [(ngModel)]='board.newtask' placeholder="Enter new card"></textarea>
+    <div class="button-con">  <button class="add-task" (click)='addTask(i)'> Add Card</button> <div (click)='resetPosition(i)'>X</div>  </div>
+  </div>
+  <div  *ngIf='!board.showNewcard' class="flex"> 
+   <button (click)='showNewCard(i)' class="show-new-card"> + Add a card </button>
+   
+  </div>
+  <div *ngFor='let task of board.tasks'  draggable="true"
+  (dragstart)='dragstart($event)'
+  (dragover)='dragover($event)'
+  >
+   {{task.title}}  
+  </div>
+</div>
+
+<div class="addnewlist">
+  <div *ngIf='addList'>
+  <input  [(ngModel)]='addListData'/>
+  <button (click)='appendNewList()'>Add</button>
+  </div>
+   <span (click)='addNewList()'>+Add new list</span>
+</div>
+</main>
+
+<!-- <pre>
+{{allBoards | json}}
+</pre> -->

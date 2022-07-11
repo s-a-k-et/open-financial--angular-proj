@@ -1,0 +1,61 @@
+p {
+  font-family: Lato;
+}
+.flex {
+  display: flex;
+}
+.show-new-card {
+  border: none;
+    text-align: left;
+    background: transparent;
+    cursor: pointer;
+}
+.show-new-card:hover {
+  background-color: darkgray;
+}
+.board {
+  display: flex;
+  flex-direction: row;
+  width: 100;
+  justify-content: space-evenly;
+}
+.inputTask {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.add-task {
+  background-color: lightblue;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  border: transparent;
+}
+.inputTask textarea {
+  height: 70px;
+  border: transparent;
+  border-radius: 8px;
+}
+.button-con {
+  margin-top: 5px;
+  padding-left: 5px;
+  display: flex;
+  width: 90px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.button-con div {
+  cursor: pointer;
+}
+
+.eachBoard {
+  padding: 12px;
+  background-color: lightgray;
+  flex-basis: 20%;
+}
+.board-title {
+  font-weight: bold;
+  padding: 6px;
+  margin-bottom: 8px;
+}
